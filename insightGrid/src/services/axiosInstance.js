@@ -4,7 +4,7 @@ import { getAccessToken, getRefreshToken, setTokens, clearTokens } from "../util
 import { refreshTokenAPI } from "../features/auth/authAPI";
 
 const axiosInstance = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: process.env.REACT_APP_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
